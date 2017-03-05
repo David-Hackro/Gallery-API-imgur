@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'me.tatarka.retrolambda'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        applicationId "tutorials.hackro.com.gallery"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+
+        buildConfigField "String", "BASE_URL", "\"https://api.imgur.com/3/image\""
+        buildConfigField "String", "KEY_SERVICE", "9478cd68e830cc6"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile appcompatDependencies.appcompat
+    compile appcompatDependencies.design
+
+    compile glideDependencies.glide
+
+    compile googleDependecies.gson
+    compile retrofitDependencies.retrofit
+    compile retrofitDependencies.adapter
+    compile retrofitDependencies.converter
+    compile retrofitDependencies.scalars
+
+    compile rxandroidDependencies.rxandroid
+    compile rxjavaDependencies.rxJava
+
+
+    compile butterknifeDependencies.butterknife
+    apt 'com.jakewharton:butterknife-compiler:8.2.1'
+
+    compile daggerDependencies.dagger
+    provided 'javax.annotation:jsr250-api:1.0'
+    provided 'org.glassfish:javax.annotation:10.0-b28'
+
+    apt 'com.google.dagger:dagger-compiler:2.9'
+}

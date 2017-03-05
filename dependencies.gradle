@@ -1,0 +1,62 @@
+ext{
+
+
+    appcompatVersion = '25.0.1'
+
+    appcompatDependencies = [
+            appcompat   :   "com.android.support:appcompat-v7:${appcompatVersion}",
+            design      :   "com.android.support:design:${appcompatVersion}"
+    ]
+
+
+    glideVersion = '3.7.0'
+
+    glideDependencies = [  glide    :   "com.github.bumptech.glide:glide:${glideVersion}"]
+
+
+    googleVersion = '2.6.2'
+
+    googleDependecies = [
+            gson    :   "com.google.code.gson:gson:${googleVersion}"
+    ]
+
+    retrofitVersion = '2.1.0'
+
+
+    retrofitDependencies = [
+            retrofit    :   "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            adapter    :   "com.squareup.retrofit2:adapter-rxjava:${retrofitVersion}",
+            converter    :   "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
+            scalars    :   "com.squareup.retrofit2:converter-scalars:${retrofitVersion}"
+    ]
+
+    rxandroidVersion = '1.2.1'
+
+    rxandroidDependencies = [
+            rxandroid   :   "io.reactivex:rxandroid:${rxandroidVersion}",
+    ]
+
+
+    rxjavaVersion = '1.1.6'
+
+    rxjavaDependencies = [
+            rxJava   :   "io.reactivex:rxjava:${rxjavaVersion}",
+    ]
+
+
+    butterknifeVersion = '8.2.1'
+
+
+    butterknifeDependencies = [
+            butterknife :   "com.jakewharton:butterknife:${butterknifeVersion}"
+    ]
+
+
+
+
+    daggerVersion = '2.9'
+    daggerDependencies = [
+            dagger   : "com.google.dagger:dagger:${daggerVersion}"
+    ]
+
+}
