@@ -14,9 +14,9 @@ android {
         versionName "1.0"
 
         buildConfigField "String", "BASE_URL", "\"https://api.imgur.com/3/\""
-        buildConfigField "String", "TOKEN_SERVICE", ""
-        buildConfigField "String", "ALBUM", "W05w3"
-        buildConfigField "String", "ENDPOINTALBUM", "album"
+        buildConfigField "String", "TOKEN_SERVICE", "\"Bearer cdec68b799965b11e7bfee206e486422df725d1b\""
+        buildConfigField "String", "ALBUM", "\"W05w3\""
+        buildConfigField "String", "ENDPOINTALBUM", "\"album\""
 
 
     }
