@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.ButterKnife;
-import tutorials.hackro.com.gallery.data.entity.ReturnImages.Data;
+import tutorials.hackro.com.gallery.data.entity.Data;
 import tutorials.hackro.com.gallery.presentation.RecyclerItemClickListener;
 
 /**

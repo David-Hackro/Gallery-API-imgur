@@ -9,9 +9,7 @@ import tutorials.hackro.com.gallery.data.entity.addImage.AddMoviesResponse;
 /**
  * Created by hackro on 6/03/17.
  */
-public interface AppDataImages {
-
+public interface DataSource {
     Observable<ImagesResponse> getImages();
     Observable<AddMoviesResponse> addImage(File image);
-
 }

@@ -13,8 +13,12 @@ android {
         versionCode 1
         versionName "1.0"
 
-        buildConfigField "String", "BASE_URL", "\"https://api.imgur.com/3/image\""
-        buildConfigField "String", "KEY_SERVICE", "9478cd68e830cc6"
+        buildConfigField "String", "BASE_URL", "\"https://api.imgur.com/3/\""
+        buildConfigField "String", "TOKEN_SERVICE", ""
+        buildConfigField "String", "ALBUM", "W05w3"
+        buildConfigField "String", "ENDPOINTALBUM", "album"
+
+
     }
 
     buildTypes {

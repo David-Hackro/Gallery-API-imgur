@@ -1,10 +1,12 @@
 
-package tutorials.hackro.com.gallery.data.entity.ReturnImages;
+package tutorials.hackro.com.gallery.data.entity.returnImages;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
+
+import tutorials.hackro.com.gallery.data.entity.Data;
 
 public class ImagesResponse {
 

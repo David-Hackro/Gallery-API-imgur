@@ -4,7 +4,7 @@ package tutorials.hackro.com.gallery.data.entity.addImage;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import tutorials.hackro.com.gallery.data.entity.ReturnImages.Data;
+import tutorials.hackro.com.gallery.data.entity.Data;
 
 public class AddMoviesResponse{
 
