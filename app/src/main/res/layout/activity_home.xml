@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="tutorials.hackro.com.gallery.HomeActivity">
+    tools:context=".presentation.activity.HomeActivity">
 
     <TextView
         android:layout_width="wrap_content"

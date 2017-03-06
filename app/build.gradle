@@ -35,6 +35,11 @@ dependencies {
     compile appcompatDependencies.appcompat
     compile appcompatDependencies.design
 
+    compile 'com.android.support:cardview-v7:24.2.0'
+    compile 'com.android.support:gridlayout-v7:24.2.0'
+    compile 'com.android.support:recyclerview-v7:24.2.0'
+
+
     compile glideDependencies.glide
 
     compile googleDependecies.gson
