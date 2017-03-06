@@ -6,4 +6,4 @@ Caracteristicas:
  - Eliminacion de Imagenes(Multiples imagenes)
 
 
-[API imgur](api.imgur.com)  
+[API imgur](https://api.imgur.com/)  
