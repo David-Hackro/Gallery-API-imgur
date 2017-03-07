@@ -1,6 +1,6 @@
 package tutorials.hackro.com.gallery.presentation.activity;
 
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
@@ -23,9 +23,12 @@ public class HomeActivity extends BaseActivity implements HomePresenter.View{
     HomePresenter presenter;
 
     @BindView(R.id.list_images)
-    RecyclerView teamList;
+    RecyclerView imagesList;
 
     private PicturesAdapter adapter;
+
+    private GridLayoutManager lLayout;
+
 
     @Override
     public void initView() {
@@ -85,10 +88,9 @@ public class HomeActivity extends BaseActivity implements HomePresenter.View{
 
 
     private void initializeRecyclerView() {
-        teamList.setLayoutManager(new LinearLayoutManager(this));
-        //teamList.addItemDecoration(
-          //      new DividerItemDecoration(HomeActivity.this, 1));
-        teamList.setHasFixedSize(true);
-        teamList.setAdapter(adapter);
+        lLayout = new GridLayoutManager(this, 3);
+        imagesList.setLayoutManager(lLayout);
+        imagesList.setHasFixedSize(true);
+        imagesList.setAdapter(adapter);
     }
 }
