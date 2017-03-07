@@ -2,14 +2,18 @@ package tutorials.hackro.com.gallery.presentation.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.TimeZone;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -29,6 +33,8 @@ public class ImageViewHolder extends RecyclerView.ViewHolder{
     ImageView imageView;
     @BindView(R.id.date_image)
     TextView date;
+    @BindView(R.id.cardview)
+    CardView cardView;
 
 
     private final HomePresenter presenter;
@@ -46,7 +52,19 @@ public class ImageViewHolder extends RecyclerView.ViewHolder{
         onItemClick(dataPresentation);
         renderImage(dataPresentation.getLink());
         renderTeamName(dataPresentation.getTitle());
-        renderTeamDate(dataPresentation.getDescription().toString());
+        renderTeamDate(formatTime(dataPresentation.getDatetime()));
+
+    }
+
+    private String formatTime(int timeUnix){
+
+        TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
+        java.util.Date time= new java.util.Date((Long.parseLong(String.valueOf(timeUnix))*1000));
+
+        DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+
+        return  df.format(time).toString();
+
     }
 
     private void renderTeamDate(String s) {
@@ -74,7 +92,6 @@ public class ImageViewHolder extends RecyclerView.ViewHolder{
     }
 
     private void getImage(String urlImage, ImageView imageView) {
-        Log.e("url: ",urlImage);
         Glide.with(getContext())
                 .load(urlImage)
                 .diskCacheStrategy(DiskCacheStrategy.SOURCE)
