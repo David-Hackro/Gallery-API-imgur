@@ -13,10 +13,10 @@ public class Data {
     private String id;
     @SerializedName("title")
     @Expose
-    private Object title;
+    private String title;
     @SerializedName("description")
     @Expose
-    private Object description;
+    private String description;
     @SerializedName("datetime")
     @Expose
     private int datetime;
@@ -43,28 +43,28 @@ public class Data {
     private int bandwidth;
     @SerializedName("vote")
     @Expose
-    private Object vote;
+    private String vote;
     @SerializedName("favorite")
     @Expose
     private boolean favorite;
     @SerializedName("nsfw")
     @Expose
-    private Object nsfw;
+    private String nsfw;
     @SerializedName("section")
     @Expose
-    private Object section;
+    private String section;
     @SerializedName("account_url")
     @Expose
-    private Object accountUrl;
+    private String accountUrl;
     @SerializedName("account_id")
     @Expose
-    private Object accountId;
+    private String accountId;
     @SerializedName("is_ad")
     @Expose
     private boolean isAd;
     @SerializedName("tags")
     @Expose
-    private List<Object> tags = null;
+    private List<String> tags = null;
     @SerializedName("in_gallery")
     @Expose
     private boolean inGallery;
@@ -73,7 +73,7 @@ public class Data {
     private String deletehash;
     @SerializedName("name")
     @Expose
-    private Object name;
+    private String name;
     @SerializedName("link")
     @Expose
     private String link;
@@ -111,7 +111,7 @@ public class Data {
      * @param accountUrl
      * @param datetime
      */
-    public Data(String id, Object title, Object description, int datetime, String type, boolean animated, int width, int height, int size, int views, int bandwidth, Object vote, boolean favorite, Object nsfw, Object section, Object accountUrl, Object accountId, boolean isAd, List<Object> tags, boolean inGallery, String deletehash, Object name, String link) {
+    public Data(String id, String title, String description, int datetime, String type, boolean animated, int width, int height, int size, int views, int bandwidth, String vote, boolean favorite, String nsfw, String section, String accountUrl, String accountId, boolean isAd, List<String> tags, boolean inGallery, String deletehash, String name, String link) {
         super();
         this.id = id;
         this.title = title;
@@ -146,19 +146,19 @@ public class Data {
         this.id = id;
     }
 
-    public Object getTitle() {
+    public String getTitle() {
         return title;
     }
 
-    public void setTitle(Object title) {
+    public void setTitle(String title) {
         this.title = title;
     }
 
-    public Object getDescription() {
+    public String getDescription() {
         return description;
     }
 
-    public void setDescription(Object description) {
+    public void setDescription(String description) {
         this.description = description;
     }
 
@@ -226,11 +226,11 @@ public class Data {
         this.bandwidth = bandwidth;
     }
 
-    public Object getVote() {
+    public String getVote() {
         return vote;
     }
 
-    public void setVote(Object vote) {
+    public void setVote(String vote) {
         this.vote = vote;
     }
 
@@ -242,35 +242,35 @@ public class Data {
         this.favorite = favorite;
     }
 
-    public Object getNsfw() {
+    public String getNsfw() {
         return nsfw;
     }
 
-    public void setNsfw(Object nsfw) {
+    public void setNsfw(String nsfw) {
         this.nsfw = nsfw;
     }
 
-    public Object getSection() {
+    public String getSection() {
         return section;
     }
 
-    public void setSection(Object section) {
+    public void setSection(String section) {
         this.section = section;
     }
 
-    public Object getAccountUrl() {
+    public String getAccountUrl() {
         return accountUrl;
     }
 
-    public void setAccountUrl(Object accountUrl) {
+    public void setAccountUrl(String accountUrl) {
         this.accountUrl = accountUrl;
     }
 
-    public Object getAccountId() {
+    public String getAccountId() {
         return accountId;
     }
 
-    public void setAccountId(Object accountId) {
+    public void setAccountId(String accountId) {
         this.accountId = accountId;
     }
 
@@ -282,11 +282,11 @@ public class Data {
         this.isAd = isAd;
     }
 
-    public List<Object> getTags() {
+    public List<String> getTags() {
         return tags;
     }
 
-    public void setTags(List<Object> tags) {
+    public void setTags(List<String> tags) {
         this.tags = tags;
     }
 
@@ -306,11 +306,11 @@ public class Data {
         this.deletehash = deletehash;
     }
 
-    public Object getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(Object name) {
+    public void setName(String name) {
         this.name = name;
     }
 

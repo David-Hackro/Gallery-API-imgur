@@ -58,8 +58,14 @@ public class HomePresenter extends Presenter<HomePresenter.View> {
         }
     }
 
+    public void onTeamClicked(DataPresentation dataPresentation) {
+        getView().openTeamScreen(dataPresentation);
+    }
+
     public interface View extends Presenter.View{
         void showImages(List<DataPresentation> imagesList);
+
+        void openTeamScreen(DataPresentation dataPresentation);
     }
 
     public void destroy(){

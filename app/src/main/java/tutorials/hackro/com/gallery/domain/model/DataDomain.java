@@ -4,8 +4,8 @@ package tutorials.hackro.com.gallery.domain.model;
 public class DataDomain {
 
     private String id;
-    private Object title;
-    private Object description;
+    private String title;
+    private String description;
     private int datetime;
     private String link;
 
@@ -16,15 +16,8 @@ public class DataDomain {
     public DataDomain() {
     }
 
-    /**
-     *
-     * @param id
-     * @param title
-     * @param description
-     * @param datetime
-     * @param link
-     */
-    public DataDomain(String id, Object title, Object description, int datetime, String link) {
+
+    public DataDomain(String id, String title, String description, int datetime,String link) {
         super();
         this.id = id;
         this.title = title;
@@ -42,19 +35,19 @@ public class DataDomain {
         this.id = id;
     }
 
-    public Object getTitle() {
+    public String getTitle() {
         return title;
     }
 
-    public void setTitle(Object title) {
+    public void setTitle(String title) {
         this.title = title;
     }
 
-    public Object getDescription() {
+    public String getDescription() {
         return description;
     }
 
-    public void setDescription(Object description) {
+    public void setDescription(String description) {
         this.description = description;
     }
 

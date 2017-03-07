@@ -4,8 +4,8 @@ package tutorials.hackro.com.gallery.presentation.model;
 public class DataPresentation {
 
     private String id;
-    private Object title;
-    private Object description;
+    private String title;
+    private String description;
     private int datetime;
     private String link;
 
@@ -24,7 +24,7 @@ public class DataPresentation {
      * @param datetime
      * @param link
      */
-    public DataPresentation(String id, Object title, Object description, int datetime, String link) {
+    public DataPresentation(String id, String title, String description, int datetime, String link) {
         super();
         this.id = id;
         this.title = title;
@@ -42,19 +42,19 @@ public class DataPresentation {
         this.id = id;
     }
 
-    public Object getTitle() {
+    public String getTitle() {
         return title;
     }
 
-    public void setTitle(Object title) {
+    public void setTitle(String title) {
         this.title = title;
     }
 
-    public Object getDescription() {
+    public String getDescription() {
         return description;
     }
 
-    public void setDescription(Object description) {
+    public void setDescription(String description) {
         this.description = description;
     }
 
@@ -73,7 +73,6 @@ public class DataPresentation {
     public void setLink(String link) {
         this.link = link;
     }
-
 
     @Override
     public String toString() {
